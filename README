@@ -3,6 +3,11 @@ Mapping the restaurants found on www.eater.com lists, and mining relevant data.
 Running this scraper requires a Splash server (https://github.com/scrapinghub/splash) running on the default port 8050.
 
 TODO:
-GMap API
+GMap API to map locations
+Calculate nearest location
+Generalize spider for any given list.
+Combine scraped data into one JSON file.
+
+Refactoring:
 Change address to a separate Item?
 How to use XPath to find div's with at least some class?
