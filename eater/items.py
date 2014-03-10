@@ -7,3 +7,5 @@ from scrapy.item import Item, Field
 
 class RestaurantItem(Item):
     name = Field()
+    address = Field()
+    website = Field()

@@ -1,1 +1,6 @@
 Mapping the restaurants found on www.eater.com lists, and mining relevant data.
+
+TODO:
+GMap API
+Change address to a separate Item?
+How to use XPath to find div's with at least some class?
