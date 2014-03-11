@@ -7,6 +7,7 @@ GMap API to map locations
 Calculate nearest location
 Generalize spider for any given list.
 Combine scraped data into one JSON file.
+Create an interface (Flask application)?
 
 Refactoring:
 Change address to a separate Item?
