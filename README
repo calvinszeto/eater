@@ -3,6 +3,7 @@ Mapping the restaurants found on www.eater.com lists, and mining relevant data.
 Running this scraper requires a Splash server (https://github.com/scrapinghub/splash) running on the default port 8050.
 
 TODO:
+Add geolocation data to existing data file instead of separate
 Calculate nearest location
 GMap API to map locations
 Generalize spider for any given list.
