@@ -38,8 +38,6 @@ class Locator:
         nearest_locations.sort(key=lambda t: t[-1])
         return nearest_locations
 
-
 if __name__ == "__main__":
     locator = Locator("../data/geocoded_restaurants.json")
     print locator.nearest("1607 Creekside Dr. Sugar Land, TX 77478")
-    

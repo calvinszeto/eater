@@ -9,6 +9,9 @@ def geocode(address):
 
 with open("../data/restaurants.json", "r") as f:
     restaurants = json.load(f)
-    geocoded_data = json.JSONEncoder().encode([geocode(restaurant["address"]) for restaurant in restaurants])
+    print "Geocoding scraped data..."
+    for restaurant in restaurants:
+        restaurant.update(geocode(restaurant["address"])["results"][0])
+    geocoded_data = json.JSONEncoder().encode(restaurants)
     with open("../data/geocoded_restaurants.json", "w") as g:
         json.dump(geocoded_data, g)
