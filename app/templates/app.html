@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eater Mapper</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<link rel=stylesheet type='text/css' href="{{ url_for('static', filename='style.css') }}">
+	<script src="{{ url_for('static', filename='jquery-2.1.0.min.js') }}"></script>
+	<script type="text/javascript" 
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoxUfm0UVU8vMbto7lXPKDDTD2BbAYFAI&sensor=false"></script>
+	<script src="{{ url_for('static', filename='map.js') }}"></script>
+	<script src="{{ url_for('static', filename='locator.js') }}"></script>
+</head>
+<body>
+	<div id="map-canvas"></div>
+</body>
+</html>
