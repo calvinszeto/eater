@@ -41,5 +41,5 @@ class Locator:
 
 if __name__ == "__main__":
     locator = Locator("../data/geocoded_restaurants.json")
-    pprint.PrettyPrinter(indent=4).pprint([location[0]["name"] for location in locator.nearest("1607 Creekside Dr. Sugar Land, TX 77478")])
+    pprint.PrettyPrinter(indent=4).pprint([location[0]["name"] for location in locator.nearest(sys.argv[1])])
     
