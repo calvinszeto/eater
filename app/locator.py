@@ -37,7 +37,7 @@ class Locator:
         curr_location = self._geocode(address)["results"][0]
         nearest_locations = [(location, self._distance(curr_location, location)) for location in self._locations] 
         nearest_locations.sort(key=lambda t: t[-1])
-        return nearest_locations
+        return curr_location, nearest_locations
 
 if __name__ == "__main__":
     locator = Locator("../data/geocoded_restaurants.json")

@@ -6,7 +6,8 @@ app = Flask(__name__)
 def locate_nearest():
     address = request.args.get('address', 'Austin, TX', type=str)
     locator = Locator("/home/puppyplus/Projects/eater/data/geocoded_restaurants.json") 
-    return jsonify({"results":[location[0]["name"] for location in locator.nearest(address)]})
+    curr_location, nearest_locations = locator.nearest(address)
+    return jsonify({"loc": curr_location, "results":[location[0] for location in nearest_locations]})
 
 @app.route('/')
 def index():
