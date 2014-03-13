@@ -1,4 +1,5 @@
 var map;
+var bounds;
 function initializeMap() {
 	var mapOptions = {
 		zoom: 12,
@@ -6,16 +7,23 @@ function initializeMap() {
 	};
 	map = new google.maps.Map(document.getElementById('map-canvas'),
 		mapOptions);
-}
-
-function placeMap(lat, lng) {
-	map.setCenter(new google.maps.LatLng(lat, lng));
+	bounds = new google.maps.LatLngBounds();
 }
 
 function addLocation(loc) {
+	pos = new google.maps.LatLng(loc.lat, loc.lng)
 	var marker = new google.maps.Marker({
-		position: new google.maps.LatLng(loc.lat, loc.lng),
+		position: pos,
 		map: map,
 		title: loc.name
 	});
+	bounds.extend(pos);
+}
+
+function panMap() {
+	map.panToBounds(bounds);
+}
+
+function resetMap() {
+	bounds = new google.maps.LatLngBounds();
 }

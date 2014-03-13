@@ -4,8 +4,11 @@ $(function() {
 		$.getJSON($SCRIPT_ROOT + '/_locate_nearest', {
 			address: $('input[name="address"]').val(),
 		}, function(data) {
-			placeMap(data.loc.geometry.location.lat, 
-				data.loc.geometry.location.lng);
+			addLocation({
+				lat: data.loc.geometry.location.lat, 
+				lng: data.loc.geometry.location.lng,
+				name: data.loc.name,
+				curr: true});
 			for (var i=0; i < data.results.length; i++) {
 				addLocation({
 					lat: data.results[i].geometry.location.lat,
@@ -13,6 +16,7 @@ $(function() {
 					name: data.results[i].name
 				});					
 			}
+			panMap();
 		});
 		return false;
 	});

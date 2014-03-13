@@ -4,7 +4,6 @@ Running this scraper requires a Splash server (https://github.com/scrapinghub/sp
 
 TODO:
 Paginate/limit results
-Set zoom depending on markers instead of given location
 Add sensor
 
 Generalize spider for any given list.
