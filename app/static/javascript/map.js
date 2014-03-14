@@ -17,6 +17,9 @@ function addLocation(loc) {
 		map: map,
 		title: loc.name
 	});
+	if(loc.curr == true) {
+		marker.setIcon('http://maps.google.com/mapfiles/ms/micons/blue-dot.png');
+	}
 	bounds.extend(pos);
 }
 
