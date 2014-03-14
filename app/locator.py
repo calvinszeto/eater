@@ -33,11 +33,11 @@ class Locator:
         d = R * c 
         return d
 
-    def nearest(self, address):
+    def nearest(self, address, page, per_page):
         curr_location = self._geocode(address)["results"][0]
         nearest_locations = [(location, self._distance(curr_location, location)) for location in self._locations] 
         nearest_locations.sort(key=lambda t: t[-1])
-        return curr_location, nearest_locations
+        return curr_location, nearest_locations[page*per_page:(page+1)*per_page]
 
 if __name__ == "__main__":
     locator = Locator("../data/geocoded_restaurants.json")

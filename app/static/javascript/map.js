@@ -25,6 +25,7 @@ function addLocation(loc) {
 
 function panMap() {
 	map.panToBounds(bounds);
+    map.setCenter(bounds.getCenter());
 }
 
 function resetMap() {
