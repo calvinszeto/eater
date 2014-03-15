@@ -1,6 +1,24 @@
 from flask import Flask, render_template, request, jsonify
+from flask.ext.sqlalchemy import SQLAlchemy
 from locator import Locator
+
 app = Flask(__name__)
+app.config.from_pyfile('config.py')
+db = SQLAlchemy(app)
+
+class Restaurants(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column('name', db.String)
+    address = db.Column('address', db.String, nullable=True)
+    website = db.Column('website', db.String, nullable=True)
+
+    def __init__(self, name, address, website):
+        self.name = name
+        self.address = address
+        self.website = website
+
+    def __repr__(self):
+        return '<Restaurant %r>' % self.name
 
 @app.route('/_locate_nearest')
 def locate_nearest():
