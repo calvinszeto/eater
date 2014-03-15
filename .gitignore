@@ -1,4 +1,5 @@
 *.swp
 *.pyc
 *.vim
+app/config.py
 data/
