@@ -1,6 +1,5 @@
-Flask==0.10.1
-Jinja2==2.7.2
 MarkupSafe==0.19
+SQLAlchemy==0.9.4
 Scrapy==0.22.2
 Twisted==13.2.0
 Werkzeug==0.9.4
