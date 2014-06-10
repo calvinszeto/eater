@@ -3,12 +3,11 @@ Mining the restaurants found on www.eater.com lists and relevant data.
 Running this scraper requires a Splash server (https://github.com/scrapinghub/splash) running on the default port 8050.
 
 TODO:
-Add geolocation data to database
-Add other information to database
-Implement app to use database
-
 Generalize spider for any given list.
 Mine other lists
+
+Add geolocation data to database
+Add other information to database
 
 Refactoring:
 Convert folders to Python modules and run.sh to a python script.
