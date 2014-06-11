@@ -1,6 +1,6 @@
 Mining the restaurants found on www.eater.com lists and relevant data.
 
-Running this scraper requires a Splash server (https://github.com/scrapinghub/splash) running on the default port 8050.
+Running this scraper requires a Splash server (https://github.com/scrapinghub/splash) running on the default port 8050. AFAIK, Splash is installed using the setup.py (I couldn't find it with pip).
 
 TODO:
 Generalize spider for any given list.
